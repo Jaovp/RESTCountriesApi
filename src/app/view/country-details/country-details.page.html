@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content padding>
+
+<ion-card *ngIf="info">
+
+  <ion-card-header>
+    <ion-card-title>{{ info[0].name.common }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <img [src]="info[0].flags && info[0].flags.png" />
+    <ion-item lines="none">
+      <ion-label text-wrap>Capital: {{ info[0].capital }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label text-wrap>Nome oficial: {{ info[0].name.official }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label text-wrap>Região: {{ info[0].region }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label text-wrap>Subregião: {{ info[0].subregion }}</ion-label>
+    </ion-item>
+    <ion-item lines="none" *ngFor="let currency of currencies">
+      Moeda: {{ currency.name }} ({{ currency.symbol }})
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label text-wrap>População: {{ info[0].population }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label text-wrap>Area: {{ info[0].area }} Km²</ion-label>
+    </ion-item>
+  </ion-card-content>
+  <!-- Outras informações do país -->
+
+</ion-card>
+
+
+
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Paises</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+   
+  <ion-list>
+    <ion-item button *ngFor="let country of (results | async)" [routerLink]="['/', 'country-details', country.cca3]">
+      {{ country.name.common }}
+    </ion-item>
+
+  </ion-list>
+</ion-content>
