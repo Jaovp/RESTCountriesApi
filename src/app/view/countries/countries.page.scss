@@ -1,0 +1,19 @@
+ion-toolbar{
+    --background: #ffe568;
+    --padding-bottom: 20px;
+    --padding-top: 20px;
+}
+
+ion-list{
+    background-color: transparent;
+}
+
+ion-content{
+    --background: #ffff url(../../../assets/mapa.png) no-repeat center center / cover;
+}
+
+ion-item{
+    --background: #fef9df;
+    --border-radius: 10px;
+    margin: 20px;
+}

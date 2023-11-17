@@ -16,10 +16,8 @@ export class CountryDetailsPage implements OnInit {
 
   ngOnInit() {
     let cca3 = this.actRoute.snapshot.paramMap.get('cca3');
-    console.log(cca3);
     this.countriesApi.getCountrycca2(cca3).subscribe(data => {
       this.info = data;
-      console.log(this.info);
       this.processCurrencies();
     });
   }

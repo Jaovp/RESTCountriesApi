@@ -1,15 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Paises</ion-title>
+    <ion-title>Países
+      <ion-icon name="earth"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="serchTerms" (ionChange)="search()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-   
-  <ion-list>
+<ion-content>
+  
+  <ion-list lines="none">
+
     <ion-item button *ngFor="let country of (results | async)" [routerLink]="['/', 'country-details', country.cca3]">
       {{ country.name.common }}
     </ion-item>
 
   </ion-list>
+
 </ion-content>

@@ -1,3 +1,7 @@
+ion-toolbar{
+    --background: #ffe568;
+}
+
 ion-content{
     --background: #fff url(../../../assets/mapa.png) no-repeat center center / cover;
 }
@@ -14,4 +18,8 @@ ion-card-header, ion-card-content{
 
 ion-label.ion-text-wrap{
     font-size: 16px;
+}
+
+ion-back-button{
+    --color: black;
 }

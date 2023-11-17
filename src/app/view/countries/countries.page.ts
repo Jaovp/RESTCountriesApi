@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class CountriesPage implements OnInit {
 
   results!: Observable<any>;
+  serchTerms: string = '';
 
   constructor(private countriesApi : CountriesApiService, private router : Router) { }
 
@@ -21,5 +22,14 @@ export class CountriesPage implements OnInit {
   getCountriesAll() {
     this.results = this.countriesApi.getCountryAll();
   }
+
+  search() {
+    if (this.serchTerms.trim() !== '') {
+      this.results = this.countriesApi.getCountryName(this.serchTerms);
+    } else {
+      this.getCountriesAll();
+    }
+  }
+  
 
 }

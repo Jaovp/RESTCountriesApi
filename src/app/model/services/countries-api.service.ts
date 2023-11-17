@@ -18,4 +18,8 @@ export class CountriesApiService {
   getCountrycca2(cca3 : any) : Observable<any>{
     return this.http.get(this.url + '/alpha/' + cca3);
   }
+
+  getCountryName(name : string) : Observable<any>{
+    return this.http.get(this.url + '/name/' + name);
+  }
 }
